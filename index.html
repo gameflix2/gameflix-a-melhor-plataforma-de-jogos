@@ -314,15 +314,22 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 fade-in">
                 <div class="gradient-border rounded-2xl p-1 mb-8 fade-in">
-           <div class="bg-black rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden">
+         <div class="bg-black rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden group">
+    <div class="absolute inset-0 z-20 cursor-default"></div>
+
     <iframe 
-        class="w-full h-full" 
-        src="https://www.youtube.com/embed/oPQSL7rjDz8" 
+        id="vsl-video"
+        class="w-full h-full relative z-10 pointer-events-none" 
+        src="https://www.youtube.com/embed/oPQSL7rjDz8?controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&disablekb=1" 
         title="Gameflix Video" 
         frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
     </iframe>
+
+    <button id="play-button" class="absolute z-30 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-r from-[#E50914] to-[#f40612] flex items-center justify-center animate-pulse-glow hover:scale-110 transition-transform shadow-[0_0_50px_rgba(229,9,20,0.6)]">
+        <i class="fas fa-play text-3xl sm:text-4xl text-white ml-1"></i>
+    </button>
 </div>
         </div>
     </div>
